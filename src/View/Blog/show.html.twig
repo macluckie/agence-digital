@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+  <link rel="stylesheet" href="/assets/css/blog.css">
+{% endblock %}
+
+{% block content %}
+  <div id="main-content" class="blog-detail">
+
+    <h1>{{ article.title }}</h1>
+    <h2>{{ article.author }} {{ article.publicationdate }}</h2>
+    {% if article.thumbnails is null %}
+      <img src="{{ article.thumbnails }}" alt="{{ article.thumbnails }}">
+    {% else %}
+      <img src="/assets/images/noimage.png" alt="noimage">
+    {% endif %}
+
+    <p>{{ article.content }}</p>
+    <a href="{{ article.link }}">Pour lire l'article sur son site d'origine</a>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block stylesheet %}
+
+<link rel="stylesheet" href="/assets/css/adminstorytelling.css">
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<h2>story </h2>
+{% include 'tetraDigital/navadmin.html.twig' %}
+
+<form method="post">
+
+<div class="form-group">
+
+<textarea class="form-control" id="exampleFormControlTextarea1"  name="changeStory" rows=20 cols=50> {{lecture}}
+</textarea>
+<input type ="submit" value="valider">
+</div>
+</form>
+
+
+{% block javascript %}
+<script src="/assets/js/modernizr.js"></script> <!-- Modernizr -->
+<script src="/assets/js/main.js"></script> <!-- Resource jQuery -->
+
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
+{% endblock %}
+{% endblock %}

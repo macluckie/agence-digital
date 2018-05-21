@@ -1,0 +1,101 @@
+body{
+  background-color: #CECECE;
+
+}
+
+
+
+
+
+.modifiCreation{
+  width:40%;
+  margin: 0 auto;
+  display: block;
+  background-color: white;
+  padding: 20px;
+
+}
+.scrolltop {
+  display:none;
+  width:100%;
+  margin:0 auto;
+  position:fixed;
+  bottom:20px;
+  right:10px;
+}
+
+
+.badge-dark{
+  font-size: 1.5em;
+
+}
+.porfolio{
+  float: left;
+
+}
+.story{
+  float: right;
+
+}
+.deconnexion
+{
+  float: right;
+
+
+
+}
+.navadmin{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h1{
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom:40px;
+  padding-top: 15px;
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+  h1{
+
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+  }}
+
+.scroll {
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  background:#b2b2b2;
+  background:rgba(178,178,178,0.7);
+  padding:20px;
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor:pointer;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.scroll img {
+    width:50px;
+
+}
+form{
+ height: 450px;
+}
+
+h2{
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+
+}

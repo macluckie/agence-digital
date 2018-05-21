@@ -1,0 +1,55 @@
+body{
+  background-color: #CECECE;
+}
+.cd-header {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 2;
+  background: #048B9A;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+
+.badge-dark{
+  font-size: 1.5em;
+}
+
+
+.navadmin{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+h1{
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom:40px;
+  padding-top: 15px;
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+  h1{
+
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+  }
+}
+
+h2{
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+
+}

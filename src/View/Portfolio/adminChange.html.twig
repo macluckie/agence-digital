@@ -1,0 +1,75 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/changeportfolio.css" />
+
+
+{% endblock %}
+
+{% block content  %}
+
+
+<h2> modifier vos creations</h2>
+{% include 'tetraDigital/navadmin.html.twig' %}
+
+<div class="container-fluid">
+	<div class="row">
+{% for data in portfolio %}
+
+		<div class="col-md-3 text-center mb-4">
+			<div class="img-thumbnail ">
+				<form method="post" class="form-group">
+				<img  src="/assets/images/{{ data.link }}" height=150/>
+
+				<input class="form-control form-control-lg" type="text" name="namepicture"  value="{{data.link}}">
+				<input class="form-control form-control-lg" type="HIDDEN" name="id" value="{{data.id}}">
+
+				<label>catégories</label><br>
+				<span>Actuel : {{data.namecategories}}</span>
+				<select class="form-control" id="exampleFormControlSelect1" name="listecategories">
+					<option selected value="{{data.id_categories}}">Changer la catègorie</option>
+					<option value="2">refonte</option>
+					<option value="1">vitrine</option>
+					<option value="3">e-commerce</option>
+					<option value="4">gestion de stock</option>
+				</select>
+
+
+
+				<div class="form-group">
+				<label for="exampleFormControlTextarea1">commentaire</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="details">{{data.description}}</textarea>
+				</div>
+				<input type="submit" value="valider" name="validation">
+			</form>
+			</div>
+
+		</div>
+
+
+
+
+{% endfor%}
+	</div>
+</div>
+
+
+<div class='scrolltop'>
+    <div class='scroll'><img src="/assets/images/chevron.png"></div>
+</div>
+{% block javascript %}
+<script type="text/javascript" src="/assets/js/modernizr.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+
+<script type="text/javascript">
+	$(window).scroll(function() {
+	    if ($(this).scrollTop() > 50 ) {
+	        $('.scrolltop:hidden').stop(true, true).fadeIn();
+	    } else {
+	        $('.scrolltop').stop(true, true).fadeOut();
+	    }
+	});
+	$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$("h1").offset().top},"2000");return false})})
+</script>
+
+{% endblock %}
+{% endblock  %}

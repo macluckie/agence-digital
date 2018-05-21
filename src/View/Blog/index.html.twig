@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet%}
+  <link rel="stylesheet" href="assets/css/blog.css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="row">
+    {% for data in articles %}
+      <div class="col-sm-4 col-md-4">
+        <div class="thumbnail">
+          <img src="/assets/imagesBlog/{{data.thumbnails}}" alt="...">
+          <div class="caption">
+            <h3>{{data.title}}</h3>
+            <p>{{data.content}}</p>
+            <p>
+              <a href="{{data.link}}" class="btn btn-primary" role="button">Lire tout l'article</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

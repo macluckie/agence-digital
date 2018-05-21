@@ -1,0 +1,46 @@
+body{
+  background-color: white;
+}
+h2{
+  font-size: 1.7rem;
+  font-family: 'Viola';
+  text-align: center;
+  margin-top: 100px;
+}
+
+.catagories{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.description{
+  font-weight: bold;
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+
+  .description{
+    font-weight: bold;
+    width: 90%;
+  }
+
+}
+h1{
+  color: black;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding-top: 15px;
+
+}
+@media screen and (max-width: 600px) {
+  h1{
+    color: black;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+  padding-top: 15px;
+  margin-left: 45px;
+  }
+}

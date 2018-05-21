@@ -1,0 +1,49 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/adminPortfolio.css" />
+
+
+{% endblock %}
+{% block content %}
+
+
+
+<section class="addSection">
+
+  <h2>ajouter un nouveau chantier </h2>
+{% include 'tetraDigital/navadmin.html.twig' %}
+  <form method="post" enctype="multipart/form-data" class="addCreation">
+  <div class="form-group">
+  <label for="exampleFormControlFile1">selectionner une photo</label>
+  <input type="file" class="form-control-file" id="exampleFormControlFile1" name="picture">
+  <input type="hidden" name="MAX_FILE_SIZE" value="500000">
+</div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">selectionner une catégories</label>
+      <select class="form-control" id="exampleFormControlSelect1" name="categories">
+        <option value="1">vitrine</option>
+        <option value="2">refonte</option>
+        <option value="3">e-commerce</option>
+        <option value="4">gestion de stock</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">détail du chantier</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+    </div>
+
+    <input type="submit" value="ajouter" name="add" class="valider">
+  </form>
+
+{% block javascript %}
+<script src="/assets/js/modernizr.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+{% endblock %}
+
+
+
+
+{% endblock %}

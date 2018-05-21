@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="/assets/css/accueilportfolio.css">
+{% endblock %}
+
+{% block content %}
+<div id="Portfolio">
+
+
+<p>Notre agence Tetradigitale offre une palette de services adaptés à vos besoins.
+ Prenez quelques minutes pour découvrir nos réalisations !!</p>
+
+  <div class="toolbar mb-5 mt-5 text-center">
+    <button class="btn color-btn fil-cat" data-rel="all">ALL</button>
+    <button class="btn color-btn fil-cat" data-rel="vitrine">VITRINE</button>
+    <button class="btn color-btn fil-cat" data-rel="e-commerce">E-COMMERCE</button>
+    <button class="btn color-btn fil-cat" data-rel="gestionDeStock">GESTION DE STOCK</button>
+  </div>
+
+  <div id="portfolio">
+      {% for pf in portfolio %}
+        <div class="tile scale-anm web all {{ pf.namecategories }}">
+          <a href="?id={{pf.id}}"><img class="zoom" src="/assets/images/{{ pf.link }}" height="350"/></a>
+        </div>
+      {% endfor %}
+  </div>
+</div>
+
+<div style="clear:both;"></div>
+
+{% block javascript %}
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/modernizr.js"></script>
+
+    <script src="assets/js/portfolio.js"> </script>
+  {% endblock %}
+
+    {% endblock %}

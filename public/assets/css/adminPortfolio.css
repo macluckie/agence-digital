@@ -1,0 +1,115 @@
+body{
+  background-color: #CECECE;
+
+
+}
+
+
+h2{
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+
+}
+
+.badge-dark{
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+
+.addCreation{
+  width:40%;
+  margin: 0 auto;
+  display: block;
+  background-color: white;
+  padding: 50px;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .addCreation{
+    width:90%;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    padding: 50px;
+    margin-top: 100px;
+  }
+
+}
+label{
+  float: left;
+  width: 300px;
+  display: block;
+  font-size: 1.5rem;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+
+  label{
+    float: left;
+    width: 300px;
+    display: block;
+    font-size: 1rem;
+  }
+
+
+.changeCreation{
+  width:40%;
+  margin: 0 auto;
+  display: block;
+  background-color: white;
+
+}
+.navadmin{
+
+  width: 50%;
+  margin: auto;
+
+}
+
+
+h1{
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom:40px;
+  padding-top: 15px;
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+  h1{
+
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+  }}
+
+@media screen and (max-width: 600px) {
+.badge-dark{
+  font-size: 0.7rem;
+  width: 100%;
+
+}
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+
+  .navadmin{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
+
+  }
+}
